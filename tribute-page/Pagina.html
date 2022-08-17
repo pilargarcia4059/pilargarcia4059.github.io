@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <meta name="viewport" content="width=device-widht, initial-scale=1">
+        
+        <title>Mi primer pagina</title>
+        <style>
+                body {
+                        background: #FFE7C7;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0.5rem 0;
+                        
+                }
+
+                nav ul {
+                        margin: 0;
+                        margin: 0;
+                        padding: 0;
+                        background-color: aqua;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        list-style: none;
+                }
+
+
+
+                nav ul li {
+                        margin: 1rem;
+                }
+
+
+                .listLink {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                }
+
+                .container {
+                        width: 100%;
+                        display: flex;
+                        margin: 0.5rem 0 1rem 0;
+
+                }
+
+                .section_footer {
+                        width: calc(100%/3);
+                }
+
+
+                footer>* {
+                        color: rgb(24, 3, 3);
+                        display: flex;
+                        padding: 0 20px 20px 20px;
+                        margin-top: auto;
+                        /* background: #f3f3f3; */
+
+                }
+
+                #fname,
+                #lname {
+                        width: 90%;
+                }
+
+                #lname {
+                        height: 3rem;
+                }
+
+                div aside {
+                        width: 20%;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #f7e86983;
+                }
+
+
+                .list {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0;
+                        margin: 0;
+                }
+
+                .list li {
+                        margin: 1rem;
+                        text-align: start;
+                }
+
+
+                div section {
+                        width: 100%;
+                        background-color: #F5DEFF;
+                }
+
+                .aside {
+                        width: 20%;
+
+                }
+
+                .section {
+                        width: 50%;
+                        margin: 0.5rem;
+                        display: flex;
+                        flex-direction: column;
+
+                }
+
+                .section article img {
+                        align-self: center;
+                }
+
+                #navigation-bar ul {
+                        margin: 0;
+                        padding: 0;
+                        border: 1px solid #e7e7e7;
+                        background-color: #f3f3f3;
+                }
+
+                #navigation-bar li {
+                        display: inline-block;
+                }
+
+                #navigation-bar li a {
+                        display: block;
+                        color: #665;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                }
+
+                #navigation-bar li a:hover:not(.active) {
+                        background-color: #ddd;
+                }
+
+                #navigation-bar li a.active {
+                        color: #fff;
+                        background-color: #665;
+                }
+
+                #navigation-bar .menu__hamburger-icon {
+                        display: none;
+                }
+
+                @media screen and (max-width: 500px) {
+                        #navigation-bar li:not(:first-child) {
+                                display: none;
+                        }
+
+                        #main- content {
+                                flex: 6;
+                                padding: 10px 20% 10px 10px;
+
+                                @media screen and (max-width: 600px) {
+                                        #main-content {
+                                                padding-right: 10px;
+                                        }
+                                }
+
+
+
+                        }
+
+                        #navigation-bar li.menu__hamburger-icon {
+                                display: block;
+                                float: right;
+                        }
+
+                        #navigation-bar.responsive {
+                                position: relative;
+                        }
+
+                        #navigation-bar.responsive .menu__hamburger-icon {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                        }
+
+                        #navigation-bar.responsive .menu__hamburger-icon a {
+                                color: #fff;
+                        }
+
+                        #navigation-bar.responsive li {
+                                float: none;
+                                display: block !important;
+                        }
+
+                        #navigation-bar.responsive li a {
+                                text-align: left;
+                        }
+
+                        #main-content-container {
+                                display: flex;
+                        }
+
+                        #links-sidebar {
+                                flex: 2;
+                                background: pink
+                        }
+
+                        #main-content {
+                                flex: 6;
+                                padding: 10px 20% 10px 10px;
+                        }
+
+                        .main-content__img--full-width {
+                                width: 100%;
+                        }
+
+                        .footer {
+                                padding: 0 20px 20px 20px;
+                                margin-top: auto;
+                                background: #f3f3f3;
+                                display: flex;
+                                justify-content: space-between;
+                        }
+
+                        .styleFooter {
+
+                                flex-direction: column;
+
+                        }
+
+                        .footer__section {
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                        }
+
+                        .social__networks {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+                        }
+
+                        .social__network {
+                                display: flex;
+                                align-items: center;
+                        }
+
+                        .social__icon {
+                                font-size: 32px;
+                        }
+
+                        .social__icon-handler {
+                                margin-left: 10px;
+                        }
+
+                        input[type=email],
+                        textarea {
+                                width: 100%;
+                                padding: 50px 50px;
+                                margin: 50px 0;
+                                box-sizing: border-box;
+                                border: 5px solid #ccc;
+                                transition: 0.5s;
+                                outline: none;
+                        }
+
+                        input[type=email]:focus,
+                        textarea:focus {
+                                border: 50px solid #555;
+                        }
+
+                        input[type=submit] {
+                                background: #666655;
+                                border: none;
+                                color: white;
+                                padding: 16px 32px;
+                                text-decoration: none;
+                                margin: 10px 10px;
+                                cursor: pointer;
+                        }
+
+                        a {
+                                text-decoration: none;
+                                color: inherit;
+                        }
+
+                        a:hover {
+                                text-decoration: underline;
+                                text-underline-offset: 3px;
+                        }
+                }
+        </style>
+
+</head>
+
+<body style="width: 100">
+        <foder>
+
+                <header id="header">
+
+                        <h1>Lee Mi-Ho </h1>
+                        <p> Nació en el año 1987</p>
+                        </div>
+                </header>
+                <script>
+                        function myFunction() {
+                                const navigationBar = document.getElementById("navigation-bar");
+                                if (navigationBar.className === "navigation-bar") {
+                                        navigationBar.className += " responsive";
+                                } else {
+
+                                        navigationBar.className = "navigation-bar";
+                                }
+                        }
+
+                </script>
+                <nav id="navigation-bar" class="navigation-bar">
+                        <nav id="menu">
+                                <ul>
+                                        <li><a class="active" href="Trayetoria"> Inicio </a></li>
+                                        <li><a href="El salto a la fama"> Pagina 1 </a></li>
+                                        <li><a href="Vida personal"> Pagina 2</a></li>
+                                        <li class="menu__hamburger-icon">
+                                                <a href="javascript:void(0);" onclick="myFunction()"><i
+                                                                class=" lni lni-menu"></i></a>
+                                        </li>
+
+
+                                </ul>
+                        </nav>
+                </nav>
+        </foder>
+
+        <div class="container">
+                <aside>
+                        <p>Links</p>
+                        <div class=" lis">
+                                <p>Aqui podemos encontrar los links que nos llevan a los doramas donde Lee Min-Ho a
+                                        participado</p>
+                                <div class="listLink">
+                                        <a href=" https://drama.fandom.com/es/wiki/Lee_Min_Ho">Link 1</a>
+                                        <a
+                                                href="https://www.nacionrex.com/series/lee-min-ho-dramas-peliculas-papeles-personajes-doramas-20200922-0014.html">Link
+                                                2</a>
+                                        <a href="">Link 3</a>
+
+                                </div>
+                        </div>
+
+                </aside>
+                <section>
+                        <img src=" https://i0.wp.com/historia-biografia.com/wp-content/uploads/2020/06/minho.png?w=472&ssl=1.jpg"
+                                width="80%">
+                        <h2>Blibliografia</h2>
+                        <p> Nació en Heukseok-dong, Seúl, Corea del sur, el 22 de junio de 1987.
+                                Su familia está compuesta por sus padres y una hermana mayor
+                                (Lee Yong-jung). Cuando era pequeño soñaba en convertirse en futbolista,
+                                sin embargo, una lesión en quinto grado de primaria lo alejo de este
+                                camino. Comenzó a actuar en el segundo año de la secundaria y en su ultimo
+                                año firmó contrato con Starhaus Entertainment. Una vez terminado su
+                                entrenamiento, Lee, comenzaría actuar interpretando papeles menores en series de
+                                televisión.
+                                Estudió Cine y Arte en la Universidad Konkuk.
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <img src="https://www.nacionrex.com/__export/1602607267176/sites/debate/img/2020/10/13/lee-min-ho-como-es-con-fans_crop1602607111830.jpg_423682103.jpg"
+                                        width="30%">
+
+                                <br>
+                                Lee Min-ho (22 de junio de 1987) es un actor,
+                                modelo y cantante surcoreano,
+                                famoso por sus actuaciones en Boys Over Flowers,
+                                City Hunter,
+                                The Heirs y Legend of the Blue Sea. Debutó en la
+                                tevé a comienzos de los 2000s,apareciendo en
+                                The Lost Empire y Secret Campus. Más tarde llegó al cine
+                                con Public Enemy Returns (2008) y en 2009, alcanzó
+                                la fama con su papel de Gu Jun-pyo en Boys Over Flowers.
+                                Desde entonces ha protagonizado grandes proyectos,
+                                todos exitosos. Lee, junto a Lee Jong-suk,
+                                Kim Woo Bin y Park Shin Hye, hacen parte de la generación
+                                de actores jóvenes más famosos de Corea del Sur.
+                                Como cantante ha publicado: My Everything (2013) y Song for You (2014).
+                        </p>
+
+                        <h2> Trayectoria actoral de Lee Min-Ho
+                        </h2>
+                        <p> Lee comenzó hacer presencia en la tevé hacia comienzos de los años 2000,
+                                apareciendo en dramas como The Lost Empire (2001) y Nonstop 5 (2004).
+                                Su primer rol oficial llegaría con Sharp en 2004, interpretando a Lee Jin -ho
+                                junto a la reconocida actriz Go Ara. Luego pudo ser visto en Love Hymn (2005),
+                                interpretando a un cocinero y en Secret Campus (2006), como Park Du Hyeon.
+                                Ese mismo año su carrera seria puesta en pausa debido a un grave accidente
+                                automovilístico,
+                                en el que también resulto herido Jung Il-woo.Después de varios meses de
+                                recuperación,
+                                en los que el actor pensó no podría volver actuar, Lee regreso a la tevé para
+                                protagonizar
+                                su primer drama escolar, Mackerel Run (2007). No obstante, la serie tuvo poco
+                                éxito, por
+                                lo que se
+                                redujo a solo 8 episodios. En 2008 apareció en Get Up y I Am Sam e hizo su debut
+                                en cine
+                                interpretando a Jung Ha-yeon en Public Enemy Returns.</p>
+
+
+
+                        <h2> El salto a la fama</h2>
+                        <p> La fama llego en 2009 con su papel protagónico de Gu Jun-pyo en Boys Over Flowers,
+                                la adaptación del manga shojo del mismo nombre. En el drama era un joven heredero
+                                arrogante que se enamora de una joven de origen humilde. Compartió entonces escena
+                                con Koo Hye-sun (Blood), Kim Hyun-joong (Mischievous Kiss) y Kim Bum (Hidden Identity).
+                                Gracias el éxito que tuvo la serie, Lee, paso a ser uno de los actores mas cotizados de
+                                Corea del sur.
+
+                                Además, ganó el Premio al Mejor Actor Nuevo en los Premios Baeksang Arts.
+                                Al año siguiente protagonizó la comedia romántica Personal Taste (2010),
+                                en la que era un joven arquitecto que se hacia pasar por homosexual para convertirse en
+                                compañero de cuarto
+                                de la joven hija de un famoso arquitecto. En 2011 protagonizó la adaptación del manga
+                                City Hunter
+                                y participó en el programa chino de variedades Happy Camp. Mas tarde pudo ser visto como
+                                Kim Hee-sun
+                                en el drama histórico Faith y en 2013, salió su primer álbum My Everything,
+                                el cual fue seguido por una pequeña gira en Asia.Luego de esto estrenó The Heirs,
+                                el drama adolescente que se convirtió en serie de culto para cualquier amante de los
+                                K-dramas.
+                                En el drama, Lee, interpretaba a Kim Tan, un joven heredero que vive bajo la constante
+                                vigilancia de
+                                su familia y que encuentra el amor en una joven estudiante becada (Park Shin Hye).
+                                La serie fue todo un éxito tanto a nivel nacional como internacional, por lo que Lee,
+                                experimentó un fuerte aumento en su popularidad especialmente en China.
+                                En enero de 2014, Lee paso a la historia, al convertirse en la primera celebridad
+                                coreana en presentarse
+                                en la gala de Año Nuevo Lunar. También recibió el Premio del Primer Ministro en la gala
+                                de los
+                                Premios de Cultura y Artes Populares de Corea y participó como representante de la
+                                industria del entrenamiento
+                                en la tercera conferencia del Comité Presidencial de Corea para el enriquecimiento
+                                Cultural.
+                                En octubre de ese mismo año publicó su segundo álbum Song for You, reafirmando que no
+                                tenia intención de dedicarse a la música.
+                                Con posterioridad protagonizó en cine Gangnam Blues (2015) y Bounty Hunters (2016).
+                                Ese mismo año estrenó en tevé el drama de fantasía y romance La leyenda del mar azul
+                                (2016),
+                                donde era la pareja de Jun Ji-hyun. En 2017 comenzó su servicio militar, por lo que
+                                estuvo alejado de la pantalla por dos años.
+                                Lee regresó a la tevé, en abril de 2020, interpretando a Lee Gon, el Emperador del
+                                Imperio Coreano, en The King:
+                                The Eternal Monarch. En la serie comparte créditos con la estrella de Globin, Kim
+                                Go-eun.</p>
+                        <h2> Vida Personal </h2>
+                        <p> Es amigo de Kang Min-kyung (integrante de Davichi) y Jung Il-woo.
+                                Fue pareja de las actrices Park Min-young (¿Qué le ocurre a la secretaria Kim?) y Suzy
+                                (While You Were Sleeping).</p>
+                </section>
+        </div>
+        <footer>
+                <div id="footer" class="styleFooter">
+                        <div class="footer__social footer__section section_footer">
+                                <h2>Mis redes</h2>
+                                <div class="social__networks">
+                                        <div class="socail__network">
+                                                <span class="social__icon-container"><i
+                                                                class="lni lni-facebook-original"></i></span>
+                                                <span class="social__icon-handler"><a
+                                                                href="https://www.facebook.com/profile.php?id=100028158789136">Pilar
+                                                                GS</a></span>
+
+
+
+
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="footer__more-sites footer__section section_footer">
+                                <div class="footer__contact- form footer__section">
+                                        <h2>Contacto</h2>
+                                        <form action="/action_page.php">
+                                                <label for="email">Correo electronico:</label>
+                                                <input type="text" id="fname" name="fname"><br>
+                                                <label for="lname">Mensaje:</label><br>
+                                                <textarea type="text" id="lname" name="lname"></textarea>
+                                                <button>
+                                                        Enviar
+                                                </button>
+                                        </form>
+                                </div>
+
+                        </div>
+
+                        <div class="footer__more-sites footer__section section_footer">
+                                <div class="footer__more-sites footer__section">
+                                        <h2>Otros de mis sitios</h2>
+                                        <ul>
+                                                <li><a href="#">Sitio 1</a></li>
+                                                <li><a href="#">Sitio 2</a></li>
+                                                <li><a href="#">Sitio 3</a></li>
+                                                <li><a href="#">Sitio 4</a></li>
+                                                <li><a href="#">Sitio 5
+                                                        </a></li>
+                                        </ul>
+                                </div>
+                        </div>
+
+                </div>
+        </footer>
+
+</body>
+
+</html>
